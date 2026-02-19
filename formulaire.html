@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Coding Form</title>
+  <link rel="stylesheet" href="form.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<script>
+const form = document.getElementById("survey-form");
+
+form.addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+
+  if (!name || !email) {
+    alert("Veuillez remplir les champs requis !");
+    return;
+  }
+
+  alert("Formulaire envoyé avec succès !");
+  form.reset();
+});
+</script>
+<body>
+
+
+
+
+<form id="survey-form" action="send.php" method="POST">
+
+<h1 id="title">Formulaire d’enquête Coding Club Gonaives.</h1>
+ <p id="description">Merci de remplir ce formulaire.</p>
+ <p>Le Coding Club Gonaïves est un espace d’apprentissage, de créativité et de collaboration pour tous les jeunes intéressés par le développement informatique et les technologies numériques.
+
+Notre objectif est d’aider les membres à acquérir des compétences en programmation, à résoudre des problèmes, à créer des projets réels et à se préparer pour des carrières technologiques tout cela dans un environnement amical et stimulant.
+</p><br><br>
+  <label id="name-label" for="name">Nom :</label><br>
+  <input
+    id="name"
+    type="text"
+    placeholder="Entrez votre nom"
+    required
+  ><br><br>
+
+  <label id="email-label" for="email">Email :</label><br>
+  <input
+    id="email"
+    type="email"
+    placeholder="Entrez votre email"
+    required
+  ><br><br>
+
+  <label id="number-label" for="number">Âge :</label><br>
+  <input
+    id="number"
+    type="number"
+    min="10"
+    max="100"
+    placeholder="Entrez votre âge"
+  ><br><br>
+
+  <label for="dropdown">Choisissez une option :</label><br>
+  <select id="dropdown">
+    <option value="">Sélectionnez</option>
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2</option>
+    <option value="option3">Option 3</option>
+  </select><br><br>
+
+  <p>Préférence :</p>
+  <input type="radio" name="preference" value="a"> Option A<br>
+  <input type="radio" name="preference" value="b"> Option B<br>
+  <input type="radio" name="preference" value="c"> Option C<br>
+
+  <p>Intérêts :</p>
+  <input type="checkbox" value="coding"> Coding<br>
+  <input type="checkbox" value="design"> Design<br><br>
+  <input type="checkbox" value="Cybersecurite"> Cybersecurité
+
+  <p>Commentaires :</p>
+  <textarea rows="4" cols="40"></textarea><br><br>
+
+  <button id="submit" type="submit">Envoyer</button>
+
+</form>
+
+</body>
+</html>

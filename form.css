@@ -1,0 +1,94 @@
+/* Reset simple */
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #eaf3ff, #ffffff);
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+/* Carte principale */
+#survey-form {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+
+#title {
+  text-align: center;
+  color: #0d47a1;
+}
+
+#description {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #444;
+}
+
+/* Labels */
+label {
+  font-weight: bold;
+  color: #0d47a1;
+}
+
+/* Inputs */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0 15px;
+  border-radius: 6px;
+  border: 2px solid #dbeafe;
+  transition: all 0.25s ease;
+}
+
+/* Focus interactif */
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #2196f3;
+  outline: none;
+  background: #f0f7ff;
+}
+
+/* Radios & checkboxes */
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 6px;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* Bouton */
+#submit {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(45deg, #1976d2, #42a5f5);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#submit:hover {
+  background: linear-gradient(45deg, #1565c0, #1e88e5);
+  transform: scale(1.03);
+}
+
+#submit:active {
+  transform: scale(0.98);
+}
